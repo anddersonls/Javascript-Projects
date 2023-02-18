@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Oswald', sans-serif;
+      color: #001515;
+      background: #dee9ea;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin: 20px;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:rgb(35, 16, 92);
+
+}
+
+.border{
+    height: 0.2rem;
+    width: 5rem;
+    background: rgb(157, 145, 192);
+}
+
+.review_container{
+    display: grid;
+    place-items: center;
+    max-width: 600px;
+    text-align: center;
+    background: white;
+    box-shadow: 1px 6px 3px 1px rgb(113, 113, 113);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 20px 20px 0 20px;
+    position: relative;
+    border: 1px solid darkblue
+}
+
+.review_container p{
+    align-items: center;
+    justify-items: center;
+}
+
+#image{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+.decoration{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: rgb(40, 40, 102);
+    z-index: 1;
+    position: absolute;
+    top:10px;
+    right: 210px;
+}
+
+#author{
+    margin-top: 20px;
+    color: rgb(79, 69, 69);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#job{
+    text-transform: uppercase;
+    color:rgb(93, 93, 234);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#review{
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+button{
+    border:none;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.fas{
+    color: rgb(99, 99, 152);
+    border: 1px solid white;
+    background: white;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 760px){
+    .review_container{
+        max-width: 400px;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .border{
+        height: 0.1rem;
+    }
+    .decoration{
+        right: 110px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .decoration{
+        right: 40px;
+    }
+}
