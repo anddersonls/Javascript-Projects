@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+img{
+    height: 100vh;
+    z-index: -1;
+    width: 100%;
+}
+
+.container_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container_content h2{
+    font-size: 3rem;
+    color: rgb(0, 0, 20)
+}
+
+.fa-times{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: rgb(97, 2, 2);
+    z-index: -10;
+    visibility: hidden;
+}
+
+.open_button{
+    padding: 10px 50px;
+    background: rgb(156, 156, 221);
+    border: 1px solid rgb(15, 15, 61);
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.open_button:hover{
+    color:rgb(156, 156, 221);
+    background-color: white;
+
+}
+
+.modal_container{
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(158, 158, 211);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.modal_content{
+    width: 700px;
+    height: 300px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top: -1000px;
+}
+
+.modal_content.is-active{
+    visibility: visible;
+    z-index: 99;;
+    animation: dropModal 1s ease;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_content.upModal{
+    animation: upModal 1s ease;
+}
+
+@keyframes upModal{
+    0%{
+        top:40%;
+    }
+    100%{
+        top:-300px;
+    }
+}
+@keyframes dropModal{
+    0%{
+        top: -300px;
+    }
+    100%{
+        top: 50%;
+    }
+}
+
+.modal_container.active{
+    visibility: visible;
+    opacity: 0.5;
+    transition: all 1s ease;
+}
+
+.fa-times.close{
+    visibility: visible;
+    z-index: 10;
+}
+
+@media screen and (max-width: 760px){
+    .modal_content, .container_content{
+        width: 350px;
+        height: 200px;
+    }
+    .container_content h2{
+        font-size: 1.5rem;
+    }
+}
