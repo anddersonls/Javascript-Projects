@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 100vw;
+}
+
+.navbar_container{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(97, 97, 134);
+    z-index: 1;
+}
+
+.logo{
+    margin-left: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.links_container{
+    position: absolute;
+    display: flex;
+    margin-right: 20px;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 100vh;
+    top: -1000px;
+    right: -20px;
+    background: rgb(97, 97, 134);
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.links_container.aside{
+    background: rgb(97, 97, 134);
+    top: 0px;
+    transition: all 0.5s ease-out;
+    z-index: 10;
+    right: 0;
+    margin-right: 0;
+    height: 100vh;
+    padding: 40px auto;
+}
+
+.link{
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    color: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: table;
+    width: 100%;
+    padding: 60px;
+}
+
+.toggle{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    display: block;
+}
+
+.navbar_item{
+    width: 100%;
+}
+
+.link:hover{
+    color: rgb(83, 67, 67);
+    transition: all 0.3s ease;
+}
+
+.toggle.is_active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.toggle.is_active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle.is_active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 760px){
+    .toggle{
+        right: 5%;
+        top: 3%;
+    }
+    .links_container, .links_container.aside{
+        width: 50%;
+    }
+}
