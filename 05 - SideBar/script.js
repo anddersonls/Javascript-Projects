@@ -3,7 +3,6 @@ const navbar = document.querySelector('.links_container')
 
 const mobileMenu = () => {
     menu.classList.toggle('is_active')
-    menu.classList.toggle('active')
     navbar.classList.toggle('aside')
 }
 
