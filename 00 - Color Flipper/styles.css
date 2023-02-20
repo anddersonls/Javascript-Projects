@@ -69,3 +69,11 @@ a {
   color: white;
   border: 2px solid white;
 }
+
+@media screen and (max-width: 550px){
+  .container h2{
+    width: 300px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+}
