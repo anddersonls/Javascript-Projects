@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:  "Roboto", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.25;
     background: rgb(236, 236, 243);
 }
@@ -44,7 +44,14 @@
     color: white;
     background: rgb(135, 111, 52);
     transition: all 0.2s ease;
+    transform: translateY(-2px);
 }
+
+.btn.active{
+    background: rgb(170, 145, 79);
+    color: white;
+}
+
 section{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -58,6 +65,12 @@ section{
     gap: 0 20px;
     max-width: 700px;
     width: 100%;
+    transition: all 0.3s ease;
+}
+
+.item-container:hover{
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
 }
 
 .item-img{
@@ -85,7 +98,7 @@ section{
     padding-top: 10px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1250px){
     section{
         display: grid;
         grid-template-columns: 1fr;

@@ -108,7 +108,12 @@ const categoryFilter = () => {
   allButtons.forEach((button) =>{
     button.addEventListener('click', function(){
       const category = button.id
+
+      allButtons.forEach((item)=> {
+        item.classList.remove('active')
+      })
       
+      button.classList.add('active')
       const categoryItems = menu.filter((item) => item.category === category)
     
       if(category === 'All'){
