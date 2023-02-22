@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Roboto", sans-serif;
+    line-height: 1.25;
+    background: rgb(236, 236, 243);
+}
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.title-container span{
+    width: 100px;
+    height: 5px;
+    background: rgb(135, 111, 52);
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 30px;
+}
+
+.btn{
+    padding: 5px 20px;
+    border: 2px solid rgb(135, 111, 52);
+    color:rgb(135, 111, 52);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    max-width: 120px;
+    width: 100%;
+}
+
+.btn:hover{
+    color: white;
+    background: rgb(135, 111, 52);
+    transition: all 0.2s ease;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 150px;
+    gap: 60px 40px;
+    
+}
+
+.item-container{
+    display: flex;
+    gap: 0 20px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.item-img{
+    width: 250px;
+    height: 150px;
+    border-radius: 8px;
+    border: 4px solid rgb(135, 111, 52);
+}
+
+.item-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(135, 111, 52);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.item-price{
+    color: rgb(135, 111, 52);
+}
+
+.item-description{
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    section{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10px;
+        gap: 20px 0;
+        place-items: center;
+    }
+    .item-img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    section{
+        gap: 60px 0;
+    }
+    .btn-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 30px;
+        place-items: center;
+    }
+    .item-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .item-img{
+        width: 300px;
+        height: 200px;
+    }
+}
